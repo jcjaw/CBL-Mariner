@@ -62,53 +62,53 @@ install -vDm644 examples/transparent_proxy.cfg  %{buildroot}/%{_sysconfdir}/hapr
 - Bump release version alongside upgrade to lua 5.4.2
 - Change URL/Source0 tags to use HTTPS
 
-* Thu Jun 04 2020 Ruying Chen <v-ruyche@microsoft.com> 2.1.5-1
+* Thu Jun 04 2020 Ruying Chen <v-ruyche@microsoft.com> - 2.1.5-1
 - Update to 2.1.5
 
-* Tue May 19 2020 Nicolas Ontiveros <niontive@microsoft.com> 1.9.6-5
+* Tue May 19 2020 Nicolas Ontiveros <niontive@microsoft.com> - 1.9.6-5
 - Fix CVE-2019-14241.
 - Fix CVE-2020-11100.
 
-* Sat May 09 00:20:35 PST 2020 Nick Samson <nisamson@microsoft.com> 1.9.6-4
+* Sat May 09 00:20:35 PST 2020 Nick Samson <nisamson@microsoft.com> - 1.9.6-4
 - Added %%license line automatically
 
-* Tue Apr 21 2020 Nicolas Ontiveros <niontive@microsoft.com> 1.9.6-3
+* Tue Apr 21 2020 Nicolas Ontiveros <niontive@microsoft.com> - 1.9.6-3
 - Fix CVE-2019-19330.
 - Remove sha1 macro.
 
-* Tue Sep 03 2019 Mateusz Malisz <mamalisz@microsoft.com> 1.9.6-2
+* Tue Sep 03 2019 Mateusz Malisz <mamalisz@microsoft.com> - 1.9.6-2
 - Initial CBL-Mariner import from Photon (license: Apache2).
 
-* Tue Apr 2 2019 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.9.6-1
+* Tue Apr 2 2019 Priyesh Padmavilasom <ppadmavilasom@vmware.com> - 1.9.6-1
 - Update to 1.9.6
 
-* Thu Feb 28 2019 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.8.14-2
+* Thu Feb 28 2019 Priyesh Padmavilasom <ppadmavilasom@vmware.com> - 1.8.14-2
 - Patch for CVE_2018_20102
 - Patch for CVE_2018_20103
 
-* Tue Dec 04 2018 Ajay Kaher <akaher@vmware.com> 1.8.14-1
+* Tue Dec 04 2018 Ajay Kaher <akaher@vmware.com> - 1.8.14-1
 - Update to version 1.8.14
 
-* Thu Oct 25 2018 Srivatsa S. Bhat (VMware) <srivatsa@csail.mit.edu> 1.8.13-2
+* Thu Oct 25 2018 Srivatsa S. Bhat (VMware) <srivatsa@csail.mit.edu> - 1.8.13-2
 - Build with USE_SYSTEMD=1 to fix service startup.
 
-* Wed Sep 12 2018 Anish Swaminathan <anishs@vmware.com> 1.8.13-1
+* Wed Sep 12 2018 Anish Swaminathan <anishs@vmware.com> - 1.8.13-1
 - Update to version 1.8.13
 
-* Tue Apr 04 2017 Dheeraj Shetty <dheerajs@vmware.com> 1.6.12-1
+* Tue Apr 04 2017 Dheeraj Shetty <dheerajs@vmware.com> - 1.6.12-1
 - Updated to version 1.6.12
 
-* Sun Nov 27 2016 Vinay Kulkarni <kulkarniv@vmware.com> 1.6.10-1
+* Sun Nov 27 2016 Vinay Kulkarni <kulkarniv@vmware.com> - 1.6.10-1
 - Upgrade to 1.6.10 to address CVE-2016-5360
 
-* Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> 1.6.3-3
+* Tue May 24 2016 Priyesh Padmavilasom <ppadmavilasom@vmware.com> - 1.6.3-3
 - GA - Bump release of all rpms
 
-* Fri May 20 2016 Xiaolin Li <xiaolinl@vmware.com> 1.6.3-2
+* Fri May 20 2016 Xiaolin Li <xiaolinl@vmware.com> - 1.6.3-2
 - Add haproxy-systemd-wrapper to package, add a default configuration file.
 
-* Mon Feb 22 2016 Xiaolin Li <xiaolinl@vmware.com> 1.6.3-1
+* Mon Feb 22 2016 Xiaolin Li <xiaolinl@vmware.com> - 1.6.3-1
 - Updated to version 1.6.3
 
-* Thu Oct 01 2015 Vinay Kulkarni <kulkarniv@vmware.com> 1.5.14-1
+* Thu Oct 01 2015 Vinay Kulkarni <kulkarniv@vmware.com> - 1.5.14-1
 - Add haproxy v1.5 package.
