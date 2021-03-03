@@ -2,6 +2,7 @@
 # Licensed under the MIT License.
 #
 # Workflow to automatedly verify the quickstart instructions
+# Edited by J.C.
 
 name: Verify Quickstart 1.0
 
