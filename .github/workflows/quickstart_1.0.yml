@@ -59,19 +59,17 @@ jobs:
       run: |
         # Golang and docker are already installed on the agent
         sudo apt-get update
-        sudo apt -y install make tar wget curl rpm qemu-utils genisoimage pigz
-        
-    - name: Prepare artifact
-      run: |
-        if [ -n "./artifact/CBL-Mariner/ISO" ]; then \
-          mkdir -p ./artifact/CBL-Mariner/ISO; \
-        fi
-        
+        sudo apt -y install make tar wget curl rpm qemu-utils genisoimage pigz       
+            
     - name: ISO Quick Start
       run: |
         pushd toolkit
         sudo make iso REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/full.json
+        sudo make meta-user-data
         popd
+        if [ ! -d "./artifact/CBL-Mariner/ISO" ]; then \
+            mkdir -p ./artifact/CBL-Mariner/ISO; \
+        fi
         cp -rf $(find $(IMAGES_DIR) -type f -name "*.iso") ./artifact/CBL-Mariner/ISO
         
     - name: Deliver ISO
@@ -102,16 +100,15 @@ jobs:
         sudo apt-get update
         sudo apt -y install make tar wget curl rpm qemu-utils genisoimage pigz
 
-    - name: Prepare artifact
-      run: |
-        mkdir -p ./artifact/CBL-Mariner/VHDX
-        
+    
     - name: VHDX Quick Start
       run: |
         pushd toolkit
-        sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/core-efi.json
-        sudo make meta-user-data
+        sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/core-efi.json        
         popd
+        if [ ! -d "./artifact/CBL-Mariner/VHDX" ]; then \
+            mkdir -p ./artifact/CBL-Mariner/VHDX; \
+        fi
         cp -rf $(find $(IMAGES_DIR) -type f -name "*.vhdx") ./artifact/CBL-Mariner/VHDX
         cp $(IMAGES_DIR)/meta-user-data.iso ./artifact/CBL-Mariner/VHDX
         
