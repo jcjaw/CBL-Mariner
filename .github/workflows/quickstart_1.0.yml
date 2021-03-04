@@ -107,8 +107,10 @@ jobs:
       run: |
         pushd toolkit
         sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/core-efi.json
+        sudo make meta-user-data
         popd
         cp -rf $(find $(IMAGES_DIR) -type f -name "*.vhdx") ./artifact/CBL-Mariner/VHDX
+        cp $(IMAGES_DIR)/meta-user-data.iso ./artifact/CBL-Mariner/VHDX
         
     - name: Deliver VHDX
       uses: actions/upload-artifact@v2
