@@ -78,6 +78,7 @@ jobs:
         name: ISO Quick Start
         path: ./artifact/CBL-Mariner/ISO
         
+          
   vhdx_quickstart:
     runs-on: ubuntu-18.04
 
@@ -116,4 +117,14 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: VHDX Quick Start
-        path: ./artifact/CBL-Mariner/VHDX   
+        path: ./artifact/CBL-Mariner/VHDX
+        
+ Clean everything:
+    runs-on: ubuntu-18.04
+
+    steps:     
+    - name: Clean
+      run: |
+        pushd toolkit
+        sudo make clean
+        popd
