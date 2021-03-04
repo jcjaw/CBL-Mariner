@@ -70,6 +70,7 @@ jobs:
         pushd toolkit
         sudo make iso REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/full.json
         popd
+        cp -rf $(find $(IMAGES_DIR) -type f -name "*.iso") ./artifact/CBL-Mariner/ISO
         
     - name: Deliver ISO
       uses: actions/upload-artifact@v2
@@ -107,6 +108,7 @@ jobs:
         pushd toolkit
         sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/core-efi.json
         popd
+        cp -rf $(find $(IMAGES_DIR) -type f -name "*.vhdx") ./artifact/CBL-Mariner/VHDX
         
     - name: Deliver VHDX
       uses: actions/upload-artifact@v2
