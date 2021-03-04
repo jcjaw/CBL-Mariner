@@ -119,7 +119,8 @@ jobs:
         name: VHDX Quick Start
         path: ./artifact/CBL-Mariner/VHDX
         
- Clean everything:
+        
+  clean_everything:
     runs-on: ubuntu-18.04
 
     steps:
