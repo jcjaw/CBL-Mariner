@@ -72,7 +72,7 @@ jobs:
         popd
         
     - name: Deliver ISO
-      uses: action/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: ISO Quick Start
         path: ./artifact/CBL-Mariner/ISO
@@ -109,7 +109,7 @@ jobs:
         popd
         
     - name: Deliver VHDX
-      uses: action/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: VHDX Quick Start
         path: ./artifact/CBL-Mariner/VHDX   
