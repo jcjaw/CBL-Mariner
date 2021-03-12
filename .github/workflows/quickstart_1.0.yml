@@ -65,7 +65,7 @@ jobs:
     - name: ISO Quick Start
       run: |
         pushd toolkit
-        sudo make iso REBUILD_TOOLS=y REBUILD_PACKAGES=y CONFIG_FILE=./imageconfigs/full.json
+        sudo make iso REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/full.json
         sudo make meta-user-data
         popd
         if [ ! -d "./artifact/CBL-Mariner/ISO" ]; then \
@@ -106,7 +106,7 @@ jobs:
     - name: VHDX Quick Start
       run: |
         pushd toolkit
-        sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=y CONFIG_FILE=./imageconfigs/core-efi.json        
+        sudo make image REBUILD_TOOLS=y REBUILD_PACKAGES=n CONFIG_FILE=./imageconfigs/core-efi.json        
         popd
         if [ ! -d "./artifact/CBL-Mariner/VHDX" ]; then \
             mkdir -p ./artifact/CBL-Mariner/VHDX; \
